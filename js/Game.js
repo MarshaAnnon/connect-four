@@ -1,6 +1,6 @@
 class Game {
     constructor() {
-        this.board = board;
+        this.board = new Board;
         this.players = this.createPlayers(2);
         this.ready = false;
     }
@@ -13,18 +13,25 @@ class Game {
         const players = [
             new Player('Player A', 1, '#e15258', true),
             new Player('Player B', 2, '#e59a13')
-        ]       
+        ];       
         return players;   
     }
     /**
-     * Gets game ready to play
+     * begins game
      */
     startGame() {
-
+        this.board.drawHTMLBoard();
+        this.activePlayer.activeToken.drawHTMLToken();
+        this.ready = true;
     }
 
+    /**
+     * Returns active player
+     * @return  {Object} player -The active player
+     */
+
     get activePlayer() {
-        return this.players.find(player => player.active)
+        return this.players.find(player => player.active);
     }
 
     
