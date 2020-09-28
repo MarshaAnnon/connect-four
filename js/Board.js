@@ -1,5 +1,5 @@
 class Board {
-    constructor(row, column, spaces) {
+    constructor() {
         this.row = 6;
         this.column = 7;
         this.spaces = this.createSpaces();
