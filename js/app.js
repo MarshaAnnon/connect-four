@@ -1,4 +1,4 @@
-const newGame = new Game()
+const game = new Game();
 
 document.findElementById('begin-game').addEventListener('click', () => {
     Game.startGame();
