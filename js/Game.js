@@ -20,5 +20,13 @@ class Game {
      * Gets game ready to play
      */
     startGame() {
+
     }
+
+    get activePlayer() {
+        return this.players.find(player => player.active)
+    }
+
+    
+
 }
