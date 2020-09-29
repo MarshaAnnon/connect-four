@@ -1,5 +1,3 @@
-/* compliments of Treehouse */
-
 /* BACKGROUND AND BODY */
 body {
     margin: 0;
@@ -65,7 +63,7 @@ body {
     position: absolute;
 	width: 548px;
 	height: 472px;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 	margin: 0 auto;
     left: 0;
     right: 0;
@@ -87,7 +85,6 @@ body {
     border-radius: 100%;
     position: absolute;
     top: -50px;
-	left: 16px;
 }
 
 circle {

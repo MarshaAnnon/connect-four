@@ -1,10 +1,11 @@
 const game = new Game();
 
-document.getElementById('begin-game').addEventListener('click', (event) => {
+document.getElementById('begin-game').addEventListener('click', function(){
     game.startGame();
-    
-    event.target.style.display = 'none';
-    document.getElementById('play-area').style.opacity = '1'
-})
-// may need to change arrow function to: function(e) { game.handleKeydown(e) })
-document.addEventListener('keydown', () => game.handleKeydown(e))
+    this.style.display = 'none';
+    document.getElementById('play-area').style.opacity = '1';
+});
+
+document.addEventListener('keydown', function(event) {
+    game.handleKeydown(event);
+});
