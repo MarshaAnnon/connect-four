@@ -8,6 +8,10 @@ class Space {
         this.radius = this.diameter / 2;
     }
     
+    get owner() {
+        this.token ? null : this.token.owner;
+    }
+
     /**
      * Draws SVG space
      */
@@ -21,5 +25,9 @@ class Space {
         svgSpace.setAttributeNS(null, "stroke", "none");
 
         document.getElementById("mask").appendChild(svgSpace);     
-	}	
+    }	
+    
+    mark(token) {
+        this.token = token;
+    }
 }
